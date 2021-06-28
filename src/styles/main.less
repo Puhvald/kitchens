@@ -48,13 +48,14 @@ body {
 }
 
 #main {
-  background: url("../../images/mainBg.png"), center, 100% 100%;
+  background: url("../../images/mainBg.png"), 100% 100%;
+  background-position-x: center;
   position: relative;
 
   #main-container {
     width: 1200px;
     margin: 0 auto;
-    padding: 26px 0 90px 0;
+    padding: 26px 0 133px 0;
 
     #header {
 
@@ -70,7 +71,7 @@ body {
         #header-menu {
           width: 636px;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
 
           a.header-item {
             font-size: 18px;
@@ -79,14 +80,15 @@ body {
             line-height: 1.107;
             text-decoration: none;
             outline: none;
+            letter-spacing: 1.2px;
+
+            &:hover {
+              color: rgb(254, 175, 0);
+            }
           }
 
           svg {
             display: none;
-          }
-
-          a.header-item.active {
-            color: rgb(254, 175, 0);
           }
         }
 
@@ -98,17 +100,17 @@ body {
 
 
     h1 {
-      font-size: 50px;
+      font-size: 51px;
       font-family: GilroyExtraBold, sans-serif;
       color: rgb(255, 255, 255);
       line-height: 1.2;
       width: 750px;
-      margin: 137px 0 0 0;
+      margin: 118px 0 0 0;
     }
 
     #main-description {
       position: relative;
-      margin: 104px 0 97px 0;
+      margin: 73px 0 103px 0;
       z-index: 1;
 
       #main-description-image {
@@ -139,15 +141,16 @@ body {
     }
 
     #main-items {
-      width: 600px;
+      width: 614px;
       display: flex;
       justify-content: space-between;
 
       .main-item {
-        font-size: 15px;
+        font-size: 16px;
         font-family: GilroySemiBold, sans-serif;
         color: rgb(255, 255, 255);
         position: relative;
+        letter-spacing: 0.5px;
 
         &::before {
           content: '';
@@ -173,7 +176,9 @@ body {
 }
 
 #advantage {
-  background: url("../../images/advantageBg.png"), top right, 100% 100%, no-repeat;
+  background: url("../../images/advantageBg.png"), 100% 100%, no-repeat;
+  background-position-x: center;
+  background-position-y: top;
 
   #advantage-container {
     width: 1200px;
@@ -224,7 +229,7 @@ body {
       }
 
       &:nth-child(2) {
-        width: 400px;
+        width: 404px;
         position: absolute;
         right: 125px;
         top: 119px;
@@ -275,17 +280,17 @@ body {
       }
 
       .advantage-card-title {
-        font-size: 25px;
-        font-family: GilroyBold, sans-serif;
+        font-size: 27px;
+        font-family: GilroyExtraBold, sans-serif;
         color: rgb(56, 25, 0);
-        margin-bottom: 31px;
+        margin-bottom: 20px;
       }
 
       .advantage-card-text {
-        font-size: 15px;
-        font-family: GilroyMedium, sans-serif;
+        font-size: 14.7px;
+        font-family: GilroySemiBold, sans-serif;
         color: rgb(56, 25, 0);
-        line-height: 25px;
+        line-height: 27px;
         text-align: left;
       }
     }
@@ -295,10 +300,10 @@ body {
 #products {
   #product-container {
     width: 1200px;
-    margin: 158px auto 162px auto;
+    margin: 158px auto 130px auto;
 
     h2 {
-      margin: 0 0 45px 0;
+      margin: 0 0 37px 0;
 
       &::before {
         content: '';
@@ -309,18 +314,18 @@ body {
         background-image: -ms-linear-gradient(90deg, rgb(247, 146, 0) 0%, rgb(255, 180, 0) 100%);
         width: 90px;
         height: 6px;
-        margin-right: 44px;
+        margin-right: 30px;
       }
     }
 
     #product-description {
-      font-size: 19.697px;
+      font-size: 20.7px;
       font-family: GilroyMedium, sans-serif;
       color: rgb(56, 25, 0);
       line-height: 1.75;
       text-align: left;
-      max-width: 989px;
-      margin: 0 auto 77px 145px;
+      max-width: 1021px;
+      margin: 0 auto 51px 134px;
     }
 
     .products-items {
@@ -328,6 +333,7 @@ body {
 
       .product-card {
         display: flex;
+        align-items: flex-start;
 
         .product-image {
           border: 11px solid white;
@@ -349,31 +355,34 @@ body {
           .product-title {
             .product-number {
               font-size: 100px;
+              line-height: 100px;
+              display: inline-block;
               font-family: GilroyBold, sans-serif;
               color: rgba(126, 123, 121, 0.102);
               position: relative;
               left: -5px;
+              top: -14px;
             }
 
             .product-name {
-              font-size: 25px;
-              font-family: GilroyBold, sans-serif;
+              font-size: 27px;
+              font-family: GilroyExtraBold, sans-serif;
               color: rgb(56, 25, 0);
-              margin-bottom: 39px;
+              margin-bottom: 30px;
             }
           }
 
           .product-info-block {
             display: flex;
             align-items: center;
-            margin-bottom: 85px;
+            margin-bottom: 105px;
 
             .product-structure {
               margin-right: 53px;
 
               .product-structure-name {
-                font-size: 17.727px;
-                font-family: GilroyBold, sans-serif;
+                font-size: 18.727px;
+                font-family: GilroyExtraBold, sans-serif;
                 color: rgb(56, 25, 0);
                 line-height: 1.944;
               }
@@ -381,8 +390,8 @@ body {
 
             .product-structure-info {
               .product-structure-result {
-                font-size: 17.727px;
-                font-family: GilroyMedium, sans-serif;
+                font-size: 18.727px;
+                font-family: GilroySemiBold, sans-serif;
                 color: rgb(56, 25, 0);
                 line-height: 1.944;
               }
@@ -399,7 +408,7 @@ body {
 
               .product-info-text {
                 font-size: 18px;
-                font-family: GilroyMedium, sans-serif;
+                font-family: GilroySemiBold, sans-serif;
                 color: rgb(56, 25, 0);
                 margin-left: 11px;
               }
@@ -437,14 +446,16 @@ body {
         }
 
         .product-quality-text {
-          font-size: 19.696px;
-          font-family: GilroyMedium, sans-serif;
+          font-size: 20.7px;
+          font-family: GilroySemiBold, sans-serif;
           color: rgb(56, 25, 0);
           line-height: 1.75;
+          position: relative;
+          top: -12px;
           text-align: center;
 
           span {
-            font-family: GilroyBold, sans-serif;
+            font-family: GilroyExtraBold, sans-serif;
           }
         }
       }
@@ -458,7 +469,7 @@ body {
     margin: 0 auto 148px auto;
 
     h2 {
-      margin: 0 0 67px 0;
+      margin: 0 0 60px 0;
 
       &::before {
         content: '';
@@ -469,7 +480,7 @@ body {
         background-image: -ms-linear-gradient(90deg, rgb(247, 146, 0) 0%, rgb(255, 180, 0) 100%);
         width: 90px;
         height: 6px;
-        margin-right: 44px;
+        margin-right: 35px;
       }
     }
 
@@ -484,27 +495,27 @@ body {
         flex-direction: column;
 
         .comfort-content-text {
-          margin: 0 0 67px 0;
+          margin: 0 0 50px 0;
 
           &:first-child {
-            width: 353px
+            width: 374px;
           }
 
           &:nth-child(2) {
-            width: 401px
+            width: 425px;
           }
 
           &:nth-child(3) {
-            width: 367px;
+            width: 390px;
             margin: 0;
           }
 
           .content-info-title {
-            font-size: 25px;
-            font-family: GilroyBold, sans-serif;
+            font-size: 26px;
+            font-family: GilroyExtraBold, sans-serif;
             color: rgb(56, 25, 0);
             vertical-align: middle;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
 
             &::before {
               content: '';
@@ -519,12 +530,20 @@ body {
           }
 
           .content-info-description {
-            font-size: 15px;
-            font-family: GilroyMedium, sans-serif;
+            font-size: 16px;
+            font-family: GilroySemiBold, sans-serif;
             color: rgb(56, 25, 0);
             line-height: 1.668;
             margin-left: 27px;
           }
+        }
+      }
+
+      #comfort-content-image {
+        img {
+          position: relative;
+          right: -32px;
+          top: -21px;
         }
       }
     }
@@ -593,7 +612,7 @@ body {
         position: relative;
         left: -3px;
         box-sizing: border-box;
-        padding: 28px 31px 28px 0;
+        padding: 28px 23px 28px 0;
 
         svg {
           position: absolute;
@@ -602,25 +621,34 @@ body {
         }
 
         #founder-quote {
-          font-size: 19.695px;
-          font-family: GilroyMedium, sans-serif;
+          font-size: 20.5px;
+          font-family: GilroySemiBold, sans-serif;
           color: rgb(56, 25, 0);
           line-height: 1.75;
-          width: 551px;
-          padding: 26px 61px 46px 125px;
+          width: 564px;
+          padding: 26px 61px 27px 125px;
         }
 
         #black-border-founder {
           display: flex;
-          align-items: center;
+          align-items: flex-end;
           justify-content: flex-end;
+          padding-right: 20px;
 
           #founder-name {
             font-size: 18px;
-            font-family: GilroyBold, sans-serif;
+            font-family: GilroyExtraBold, sans-serif;
             color: rgb(56, 25, 0);
             line-height: 1.222;
             width: 258px;
+          }
+
+          #founder-signature {
+            img {
+              position: relative;
+              bottom: -11px;
+              right: -5px;
+            }
           }
         }
       }
@@ -634,7 +662,8 @@ body {
     margin: 0 auto 150px auto;
 
     h2 {
-      margin: 0 0 50px 0;
+      margin: 0 0 37px 0;
+      letter-spacing: 0;
 
       &::before {
         content: '';
@@ -651,7 +680,7 @@ body {
 
     #comment-description {
       font-size: 19.697px;
-      font-family: GilroyMedium, sans-serif;
+      font-family: GilroySemiBold, sans-serif;
       color: rgb(31, 14, 7);
       line-height: 1.75;
       margin: 0 0 82px 135px;
@@ -679,8 +708,8 @@ body {
         }
 
         .video-title {
-          font-size: 17.727px;
-          font-family: GilroyBold, sans-serif;
+          font-size: 18.727px;
+          font-family: GilroyExtraBold, sans-serif;
           color: rgb(56, 25, 0);
           margin: 17px 0 0 0;
         }
@@ -696,7 +725,7 @@ body {
     position: relative;
 
     h2 {
-      margin: 0 0 49px 0;
+      margin: 0 0 40px 0;
 
       &::before {
         content: '';
@@ -712,30 +741,29 @@ body {
     }
 
     #form-block-description {
-      font-size: 19.687px;
-      font-family: GilroyMedium, sans-serif;
+      font-size: 20.69px;
+      font-family: GilroySemiBold, sans-serif;
       color: rgb(56, 25, 0);
       line-height: 1.75;
-      width: 720px;
-      margin: 45px auto 71px 135px;
+      width: 730px;
+      margin: 0 auto 60px 135px;
     }
-
 
     #white-form {
       border-radius: 20px;
       background-color: rgb(255, 255, 255);
       width: 720px;
-      box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.23);
-      padding: 33px 20px;
+      box-shadow: 0 0 57px -15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
       box-sizing: border-box;
       position: relative;
 
       #form-title {
-        font-size: 24.596px;
-        font-family: GilroyBold, sans-serif;
+        font-size: 25.596px;
+        font-family: GilroyExtraBold, sans-serif;
         color: rgb(56, 25, 0);
         line-height: 1.4;
-        width: 500px;
+        width: 519px;
         text-align: center;
         margin: 0 auto 30px auto;
       }
@@ -784,14 +812,16 @@ body {
 
     #form-image {
       position: absolute;
-      bottom: -73px;
       right: -133px;
+      bottom: -118px;
+      z-index: -1;
     }
   }
 }
 
 #footer {
-  background: url("../../images/footerBg.png"), center, 100% 100%;
+  background: url("../../images/footerBg.png"), 100% 100%;
+  background-position-x: center;
 
   #footer-container {
     width: 1200px;
@@ -813,7 +843,7 @@ body {
           display: flex;
           justify-content: space-between;
           width: 157px;
-          margin-top: 60px;
+          margin-top: 50px;
 
           a {
             margin: 0;
@@ -827,11 +857,11 @@ body {
             font-size: 20px;
             font-family: GilroyBold, sans-serif;
             color: rgb(255, 255, 255);
-            margin-bottom: 21px;
+            margin-bottom: 15px;
           }
 
           &:last-child {
-            font-size: 15px;
+            font-size: 16px;
             font-family: GilroyRegular, sans-serif;
             color: rgb(255, 255, 255);
           }
@@ -989,6 +1019,7 @@ body {
           }
         }
       }
+
       #pop-up-close {
         display: none;
       }
@@ -1002,6 +1033,7 @@ body {
 .orange-field {
   background: #f99900;
   height: 25px;
+  z-index: 500;
 }
 
 // Успешное отправление сообщения
@@ -1021,8 +1053,8 @@ body {
   }
 
   .success-message-text {
-    font-size: 18px;
-    font-family: GilroyRegular, sans-serif;
+    font-size: 20px;
+    font-family: GilroySemiBold, sans-serif;
     color: rgb(56, 25, 0);
     text-align: center;
   }
@@ -1048,7 +1080,7 @@ input {
   padding: 28px;
   box-sizing: border-box;
   font-size: 17.684px;
-  font-family: GilroyRegular, sans-serif;
+  font-family: GilroyMedium, sans-serif;
   color: rgb(126, 123, 121);
   margin-bottom: 20px;
   outline: none;
@@ -1082,15 +1114,17 @@ input {
 // Заголовок
 
 .block-title {
-  font-size: 35px;
-  font-family: GilroyMedium, sans-serif;
+  font-size: 38px;
+  font-family: GilroySemiBold, sans-serif;
   color: rgb(56, 25, 0);
   vertical-align: middle;
+  letter-spacing: 0;
 
   span {
-    font-size: 35px;
-    font-family: GilroyBold, sans-serif;
+    font-size: 38px;
+    font-family: GilroyExtraBold, sans-serif;
     color: rgb(249, 155, 0);
+    letter-spacing: 0;
   }
 }
 
@@ -1102,7 +1136,7 @@ input {
   font-size: 20px;
   font-family: ProximaNovaBold, sans-serif;
   color: rgb(255, 255, 255);
-  padding: 25px 58px;
+  padding: 25px 48px;
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -1110,6 +1144,7 @@ input {
   background-image: -webkit-linear-gradient(90deg, rgb(247, 146, 0) 0%, rgb(255, 180, 0) 100%);
   background-image: -ms-linear-gradient(90deg, rgb(247, 146, 0) 0%, rgb(255, 180, 0) 100%);
   cursor: pointer;
+  letter-spacing: 0.5px;
 }
 
 // Псевдоэлемент для каждого заголовка :)
@@ -1179,7 +1214,7 @@ input {
   li {
     width: 7px;
     height: 7px;
-    margin: 0 8px;
+    margin: 0 10px;
 
     button {
       width: 7px;
@@ -1188,7 +1223,7 @@ input {
       &:before {
         content: '';
         background: transparent;
-        border: 3px solid #7e7b79;
+        border: 4px solid #7e7b79;
         border-radius: 50%;
         width: 7px;
         height: 7px;
@@ -1201,7 +1236,7 @@ input {
     button {
       &::before {
         background: white;
-        border: 3px solid #f99b00;
+        border: 4px solid #f99b00;
         border-radius: 50%;
         width: 7px;
         height: 7px;
@@ -1211,16 +1246,3 @@ input {
 }
 
 @import "adaptive";
-
-
-
-
-
-
-
-
-
-
-
-
-

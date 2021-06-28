@@ -20,36 +20,22 @@
 
 @media screen and (max-width: 1469px) {
   #form-block {
-    #form-block-container {
-      #white-form {
-        z-index: 2;
-      }
+    overflow: hidden;
+  }
+}
 
-      #form-image {
-        bottom: -67px;
-        right: 10px;
-        z-index: 1;
-        width: 509px;
-        height: 547px;
-
-        img {
-          width: 100%;
-          height: 100%;
+@media screen and (max-width: 1263px) {
+  #comfort {
+    #comfort-container {
+      #comfort-content {
+        #comfort-content-image {
+          img {
+            right: -5px;
+          }
         }
       }
     }
   }
-}
-
-@media screen and (max-width: 1239px) {
-  #form-block {
-    #form-block-container {
-      #form-image {
-        right: 15px;
-      }
-    }
-  }
-
 }
 
 @media screen and (max-width: 1229px) {
@@ -135,8 +121,7 @@
 
       #product-description {
         font-size: 17.7px;
-        margin: 5px auto 45px 168px;
-        max-width: 710px;
+        margin: 5px auto 45px auto;
       }
 
       #product-carousel {
@@ -160,6 +145,7 @@
             .product-title {
               display: flex;
               flex-direction: column;
+              justify-content: space-around;
 
               .product-number {
                 margin-bottom: 20px;
@@ -177,6 +163,16 @@
 
             .product-card-info {
               flex-direction: column;
+
+              .product-structure {
+                .product-structure-name {
+                  font-size: 17.73px;
+                }
+
+                .product-structure-result {
+                  font-size: 17.73px;
+                }
+              }
             }
           }
         }
@@ -193,7 +189,7 @@
   #comfort {
     #comfort-container {
       max-width: 1004px;
-      margin: 0 auto 140px;
+      margin: 0 auto 215px;
 
       h2 {
         margin: 0 auto 67px 10px;
@@ -230,8 +226,8 @@
           height: 241.3px;
           padding: 9px 9.5px;
           position: absolute;
-          left: 78px;
-          bottom: -88px;
+          left: 110px;
+          bottom: -109px;
 
           #white-border-content {
             width: 273.3px;
@@ -273,6 +269,11 @@
       h2 {
         margin: 0 auto 50px 10px;
       }
+
+      #comment-description {
+        margin: 0 auto 82px 146px;
+
+      }
     }
   }
 
@@ -281,11 +282,16 @@
       max-width: 1004px;
 
       h2 {
-        margin: 0 0 49px 10px;
+        margin: 0 0 30px 10px;
+      }
+
+      #form-block-description {
+        margin: 0 auto 60px 145px;
+        width: 740px;
       }
 
       #form-image {
-        right: -60px;
+        right: -275px;
       }
     }
   }
@@ -301,7 +307,7 @@
   }
 
   .slick-dots {
-    bottom: 255px;
+    bottom: 295px;
     width: 95%;
     margin-right: 0;
   }
@@ -335,7 +341,7 @@
       max-width: 747px;
 
       h1 {
-        font-size: 40px;
+        font-size: 48px;
         margin: 80px 0 0 10px;
         text-align: left;
         width: 578px;
@@ -344,7 +350,11 @@
       #header {
         #header-container {
           flex-wrap: wrap;
-          justify-content: space-evenly;
+          justify-content: space-between;
+
+          #header-menu {
+            justify-content: space-evenly;
+          }
 
           a.logo {
             margin-right: 0;
@@ -371,23 +381,23 @@
   #advantage {
     #advantage-container {
       max-width: 747px;
-      height: 690px;
-      padding-top: 50px;
+      height: 870px;
+      padding-top: 85px;
 
       h2 {
-        margin: 0 0 70px 10px;
+        margin: 0 0 70px 44px;
+
+        &::before {
+          display: none;
+        }
       }
 
       #advantage-items {
         .advantage-card {
           .advantage-card-title {
-            font-size: 20px;
             margin-bottom: 15px;
           }
 
-          .advantage-card-text {
-            font-size: 13px;
-          }
 
           &:first-child {
             &::before {
@@ -398,17 +408,17 @@
           }
 
           &:nth-child(2) {
-            top: 165px;
+            top: 210px;
 
             &::before {
-              top: -80px;
+              top: -70px;
               left: -48px;
               font-size: 150px;
             }
           }
 
           &:nth-child(3) {
-            top: 310px;
+            top: 390px;
 
             &::before {
               top: -80px;
@@ -418,7 +428,7 @@
           }
 
           &:last-child {
-            top: 495px;
+            top: 630px;
 
             &::before {
               top: -80px;
@@ -434,10 +444,18 @@
   #products {
     #product-container {
       max-width: 747px;
-      margin: 50px auto;
+      margin: 80px auto;
+
+      h2 {
+        margin-left: 20px;
+
+        &::before {
+          display: none;
+        }
+      }
 
       #product-description {
-        margin: 5px auto 45px auto;
+        margin: 5px auto 45px 20px;
       }
 
       #product-carousel {
@@ -445,8 +463,21 @@
           margin-bottom: 50px;
 
           .product-content {
+
+            .product-info-block {
+              .product-structure {
+                .product-structure-name {
+                  font-size: 16.73px;
+                }
+
+                .product-structure-result {
+                  font-size: 16.73px;
+                }
+              }
+            }
+
             .product-card-info {
-              justify-content: space-evenly;
+              justify-content: space-between;
             }
 
             .product-title {
@@ -454,10 +485,12 @@
 
               .product-number {
                 font-size: 70px;
+                line-height: 70px;
+                top: 0;
               }
 
               .product-name {
-                font-size: 22px;
+                font-size: 25px;
               }
             }
           }
@@ -468,7 +501,7 @@
         .product-quality-block {
 
           .product-quality-text {
-            font-size: 14.7px
+            font-size: 18.7px
           }
 
           &:first-child {
@@ -514,10 +547,14 @@
   #comfort {
     #comfort-container {
       max-width: 747px;
-      margin-bottom: 160px;
+      margin-bottom: 190px;
 
       h2 {
-        margin: 0 auto 50px 10px;
+        margin: 0 auto 40px 40px;
+
+        &::before {
+          display: none;
+        }
       }
 
       #comfort-content {
@@ -542,7 +579,7 @@
             }
 
             .content-info-description {
-              font-size: 13px;
+              font-size: 15px;
             }
 
             .content-info-title {
@@ -555,22 +592,24 @@
 
       #comfort-guarantee {
         #black-border {
-          padding: 28px 26px 30px 0;
+          padding: 28px 30px;
 
           #founder-quote {
-            font-size: 16.7px;
-            width: 477px;
-            padding: 10px 10px 10px 170px;
+            font-size: 17.7px;
+            padding: 10px 10px 10px 80px;
           }
 
           #black-border-founder {
+            padding-right: 0;
+
             #founder-name {
               font-size: 16px;
+              width: 250px;
             }
           }
 
           svg {
-            left: 91px;
+            left: 25px;
           }
         }
 
@@ -578,8 +617,8 @@
           width: 260.2px;
           height: 215.3px;
           padding: 9px 9.5px;
-          bottom: -88px;
-          left: 10px;
+          bottom: -100px;
+          left: 11px;
 
           #white-border-content {
             width: 236.3px;
@@ -613,6 +652,18 @@
       max-width: 747px;
       margin-bottom: 50px;
 
+      h2 {
+        margin: 0 auto 40px 20px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      #comment-description {
+        margin: 0 auto 50px 20px;
+      }
+
       #comment-content {
         .comment-video {
           &:nth-child(3) {
@@ -627,9 +678,17 @@
     #form-block-container {
       max-width: 747px;
 
+      h2 {
+        margin: 0 0 30px 20px;
+
+        &::before {
+          display: none;
+        }
+      }
+
       #form-block-description {
-        max-width: 600px;
-        margin: 45px auto 40px auto;
+        max-width: 700px;
+        margin: 0 auto 30px 20px;
       }
     }
   }
@@ -637,9 +696,43 @@
   #footer {
     #footer-container {
       max-width: 747px;
+      padding: 35px 0 25px;
 
       #footer-content {
         flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 0 35px;
+
+        #logo-social-networks {
+          order: 1;
+          margin-bottom: 40px;
+          margin-right: 96px;
+        }
+
+        #contacts {
+          order: 2;
+          padding: 0;
+        }
+
+        #address {
+          margin-left: 27px;
+          order: 3;
+        }
+
+        #work-time {
+          order: 4;
+          margin-right: 25px;
+
+          div {
+            &:first-child {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+
+      #rights {
+        padding-top: 25px;
       }
     }
   }
@@ -674,6 +767,7 @@
               input {
                 padding: 16px;
               }
+
               p {
                 &:nth-child(2) {
                   font-size: 16px;
@@ -706,10 +800,10 @@
   }
 
   .block-title {
-    font-size: 24px;
+    font-size: 34px;
 
     span {
-      font-size: 24px;
+      font-size: 34px;
     }
   }
 
@@ -718,7 +812,7 @@
   }
 
   .slick-dots {
-    bottom: 260px;
+    bottom: 290px;
   }
 }
 
@@ -732,10 +826,10 @@
 
     #main-container {
       max-width: 460px;
-      padding: 26px 0 60px;
+      padding: 26px 0 45px;
 
       h1 {
-        font-size: 32px;
+        font-size: 42px;
         margin: 50px auto 0;
         max-width: 410px;
       }
@@ -781,20 +875,34 @@
 
         #main-description-text {
           max-width: 326px;
-          font-size: 17px;
+          font-size: 22px;
+          margin-left: 115px;
+        }
+
+        #main-description-image {
+          img {
+            left: -23px;
+            top: -42px;
+          }
         }
       }
 
       #main-items {
         max-width: 410px;
+        flex-direction: column;
 
         .main-item {
-          font-size: 11px;
+          font-size: 15px;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
 
       button {
-        margin: 0 0 65px 20px;
+        margin: 0 0 45px 20px;
         padding: 20px 40px;
       }
     }
@@ -803,28 +911,20 @@
   #advantage {
     #advantage-container {
       max-width: 460px;
-      padding: 50px 0 50px 0;
+      padding: 60px 0 50px 0;
       height: auto;
 
       h2 {
-        margin: 0 auto 50px;
-
-        &::before {
-          width: 50px;
-          margin-right: 20px;
-        }
+        margin: 0 auto 45px 20px;
       }
 
       #advantage-items {
         .advantage-card {
           .advantage-card-title {
-            font-size: 17px;
+            font-size: 24px;
             margin-bottom: 15px;
           }
 
-          .advantage-card-text {
-            font-size: 11px;
-          }
 
           &:first-child {
             margin: 0 auto 45px auto;
@@ -834,9 +934,9 @@
             top: 0;
 
             &::before {
-              top: -43px;
-              left: -24px;
-              font-size: 100px;
+              top: -61px;
+              left: -28px;
+              font-size: 130px;
             }
           }
 
@@ -848,9 +948,9 @@
             top: 0;
 
             &::before {
-              top: -44px;
-              left: -27px;
-              font-size: 100px;
+              top: -57px;
+              left: -28px;
+              font-size: 130px;
             }
           }
 
@@ -862,9 +962,9 @@
             top: 0;
 
             &::before {
-              top: -39px;
+              top: -50px;
               left: -28px;
-              font-size: 100px;
+              font-size: 130px;
             }
           }
 
@@ -876,9 +976,9 @@
             top: 0;
 
             &::before {
-              top: -47px;
-              left: -31px;
-              font-size: 100px;
+              top: -57px;
+              left: -28px;
+              font-size: 130px;
             }
           }
         }
@@ -892,7 +992,7 @@
       margin: 20px auto 30px auto;
 
       h2 {
-        margin: 0 auto 20px;
+        margin: 0 auto 40px 20px;
 
         &::before {
           width: 50px;
@@ -902,7 +1002,6 @@
 
       #product-description {
         max-width: 420px;
-        font-size: 12px;
         margin: 0 auto 20px;
       }
 
@@ -925,14 +1024,6 @@
                 align-items: center;
                 max-width: 100%;
                 flex-direction: row;
-
-                .product-number {
-                  font-size: 65px;
-                }
-
-                .product-name {
-                  font-size: 19px;
-                }
               }
 
               .product-info-block {
@@ -945,39 +1036,31 @@
                   margin-bottom: 10px;
 
                   .product-structure-name {
-                    font-size: 14px;
-                    line-height: 18px;
+                    font-size: 18px;
+                    line-height: 28px;
                   }
                 }
 
                 .product-structure-info {
                   .product-structure-result {
-                    font-size: 14px;
-                    line-height: 18px;
+                    font-size: 18px;
+                    line-height: 28px;
                   }
                 }
               }
 
               .product-title {
                 .product-number {
-                  font-size: 50px;
-                  margin-bottom: 15px;
+                  margin-bottom: 0;
                 }
 
                 .product-name {
-                  font-size: 17px;
-                  margin-bottom: 10px;
+                  width: 227px;
                 }
               }
 
               .product-card-info {
                 flex-direction: row;
-
-                .product-icon-block {
-                  .product-info-text {
-                    font-size: 15px;
-                  }
-                }
               }
             }
           }
@@ -1001,7 +1084,7 @@
       margin-bottom: 60px;
 
       h2 {
-        margin: 0 auto 40px;
+        margin: 0 auto 40px 20px;
 
         &::before {
           width: 50px;
@@ -1019,10 +1102,58 @@
         #orange-block {
           position: unset;
           margin: 0 auto;
+          width: 100%;
+          height: 100px;
+          border-radius: 20px 20px 0 0;
+
+          #white-border-content {
+            width: 99%;
+            height: 95%;
+            border-radius: 20px 20px 0 0;
+
+            #first-content {
+              align-items: center;
+
+              #white-border-digit {
+                font-size: 80px;
+                line-height: 80px;
+                padding: 0 0 0 25px;
+              }
+
+              #white-border-years {
+                transform: none;
+                font-size: 45px;
+                line-height: 45px;
+                margin-left: -33px;
+              }
+            }
+
+            #white-border-guarantee {
+              left: 218px;
+              font-family: 'GilroyBlack', sans-serif;
+              top: -68.5px;
+              display: inline-block;
+            }
+          }
         }
 
         #black-border {
-          display: none;
+          width: 100%;
+          border-radius: 0 0 20px 20px;
+          position: relative;
+          top: -2px;
+          left: 0;
+          #founder-quote {
+            width: 95%;
+            padding-left: 32px;
+            z-index: 10;
+          }
+          svg {
+            z-index: -1;
+          }
+          #black-border-founder {
+            height: 60px;
+          }
         }
       }
     }
@@ -1033,23 +1164,12 @@
       max-width: 460px;
 
       h2 {
-        font-size: 19px;
-        margin: 0 auto 40px;
-
-        span {
-          font-size: 19px;
-        }
-
-        &::before {
-          width: 50px;
-          margin-right: 20px;
-        }
+        margin: 0 auto 20px 20px;
       }
 
       #comment-description {
-        font-size: 15.7px;
         max-width: 400px;
-        margin: 0 auto 60px auto;
+        margin: 0 0 40px 20px;
       }
 
       #comment-content {
@@ -1077,12 +1197,12 @@
       #white-form {
         max-width: 440px;
         margin: 0 auto;
-        height: 512px;
+        height: 520px;
 
         #form-title {
           max-width: 400px;
           margin: 0 auto 20px;
-          font-size: 17.6px;
+          font-size: 20px;
         }
 
         #inputs {
@@ -1140,25 +1260,29 @@
         padding: 0 0 25px;
 
         #logo-social-networks {
+          margin-right: 0;
           display: flex;
           align-items: center;
+          width: 100%;
+          justify-content: space-between;
           margin-bottom: 30px;
 
           .social-network {
-            width: 120px;
-            margin: 0 auto;
-          }
-
-          a.logo {
-            margin-right: 180px;
+            width: 150px;
+            margin: 0;
           }
         }
 
         #address {
           margin-bottom: 30px;
+          width: 96%;
+          margin-left: 0;
         }
 
         #work-time {
+          order: 3;
+          width: 96%;
+          margin: 0 0 30px 0;
           div {
             &:first-child {
               margin-bottom: 16px;
@@ -1167,6 +1291,8 @@
         }
 
         #contacts {
+          order: 4;
+          width: 96%;
           div {
             &:first-child {
               margin-bottom: 20px;
@@ -1183,10 +1309,10 @@
   }
 
   .block-title {
-    font-size: 22px;
+    font-size: 34px;
 
     span {
-      font-size: 22px;
+      font-size: 34px;
     }
 
     &:before {
@@ -1205,7 +1331,27 @@
   }
 
   .slick-dots {
-    bottom: 295px;
+    bottom: 345px;
+
+    li {
+      button {
+        &::before {
+          border: 3px solid #7e7b79;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+
+    .slick-active {
+      button {
+        &::before {
+          border: 3px solid #f99b00;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
   }
 
 }
@@ -1218,8 +1364,8 @@
 
       h1 {
         max-width: 280px;
-        font-size: 21px;
-        margin: 50px auto 0 auto;
+        font-size: 36px;
+        margin: 40px auto 0 auto;
       }
 
       #header {
@@ -1239,7 +1385,7 @@
 
           img {
             left: -25px;
-            top: -25px;
+            top: 0;
             width: 37%;
             height: 130%;
           }
@@ -1247,15 +1393,15 @@
 
         #main-description-text {
           margin: 0 auto 0 52px;
-          max-width: 215px;
-          font-size: 13px;
+          max-width: 250px;
+          font-size: 19px;
         }
       }
 
       button {
         margin: 0 auto;
-        font-size: 16px;
-        width: 95%;
+        font-size: 20px;
+        width: 100%;
       }
 
       #main-items {
@@ -1264,7 +1410,6 @@
         margin-top: 30px;
 
         .main-item {
-          font-size: 11px;
           margin-bottom: 10px;
         }
       }
@@ -1274,26 +1419,19 @@
   #advantage {
     #advantage-container {
       max-width: 300px;
-      padding: 30px 0;
+      padding: 40px 0;
 
       h2 {
-        margin: 0 auto 45px auto;
-
-        &::before {
-          width: 30px;
-          margin-right: 15px;
-        }
+        margin: 0 auto 45px 10px;
       }
 
       #advantage-items {
         .advantage-card {
           .advantage-card-title {
-            font-size: 15px;
             margin-bottom: 10px;
           }
 
           .advantage-card-text {
-            font-size: 10px;
             line-height: 20px;
           }
 
@@ -1301,9 +1439,10 @@
             max-width: 280px;
 
             &::before {
-              top: -59px;
-              left: -9px;
-              font-size: 95px;
+              top: -30px;
+              left: 233px;
+              font-size: 100px;
+              line-height: 100px;
             }
           }
 
@@ -1311,9 +1450,10 @@
             max-width: 280px;
 
             &::before {
-              top: -59px;
-              left: -9px;
-              font-size: 95px;
+              top: -30px;
+              left: 233px;
+              font-size: 100px;
+              line-height: 100px;
             }
           }
 
@@ -1321,9 +1461,10 @@
             max-width: 280px;
 
             &::before {
-              top: -59px;
-              left: -9px;
-              font-size: 95px;
+              top: -30px;
+              left: 233px;
+              font-size: 100px;
+              line-height: 100px;
             }
           }
 
@@ -1331,9 +1472,10 @@
             max-width: 280px;
 
             &::before {
-              top: -62px;
-              left: -9px;
-              font-size: 95px;
+              top: -30px;
+              left: 233px;
+              font-size: 100px;
+              line-height: 100px;
             }
           }
         }
@@ -1344,18 +1486,14 @@
   #products {
     #product-container {
       max-width: 300px;
+      margin-top: 40px;
 
       h2 {
-        font-size: 16px;
+        margin: 0 auto 30px 10px;
+      }
 
-        span {
-          font-size: 16px;
-        }
-
-        &::before {
-          width: 30px;
-          margin-right: 15px;
-        }
+      #product-description {
+        margin: 0 auto 30px 10px;
       }
 
       #product-carousel {
@@ -1365,29 +1503,34 @@
           .product-card {
             .product-content {
               .product-title {
+                justify-content: space-between;
                 .product-number {
-                  font-size: 45px;
                   margin-bottom: 15px;
                 }
 
                 .product-name {
-                  font-size: 13px;
+                  font-size: 18px;
+                  margin-bottom: 15px;
+                  width: 150px;
                 }
               }
 
               .product-info-block {
-                width: 95%;
+                width: 100%;
                 align-items: flex-start;
 
                 .product-structure {
+                  margin-right: 22px;
                   .product-structure-name {
-                    font-size: 12px;
+                    font-size: 15px;
+                    width: 102px;
                   }
                 }
 
                 .product-structure-info {
                   .product-structure-result {
-                    font-size: 12px;
+                    font-size: 15px;
+                    width: 162px;
                   }
                 }
               }
@@ -1395,19 +1538,12 @@
               .product-card-info {
                 .product-icon-block {
                   .product-info-text {
-                    font-size: 11px;
+                    font-size: 14px;
+                    margin-left: 3px;
                   }
                 }
               }
             }
-          }
-        }
-      }
-
-      #product-quality {
-        .product-quality-block {
-          .product-quality-text {
-            font-size: 12px;
           }
         }
       }
@@ -1419,24 +1555,22 @@
       max-width: 300px;
 
       h2 {
-        margin: 0 auto 30px auto;
-
-        &::before {
-          width: 30px;
-          margin-right: 15px;
-        }
+        margin: 0 auto 30px 10px;
       }
 
       #comfort-content {
         #comfort-content-info {
           .comfort-content-text {
             .content-info-title {
-              font-size: 17px;
               margin-bottom: 8px;
+              &::before {
+                width: 10px;
+                height: 10px;
+              }
             }
 
             .content-info-description {
-              font-size: 12px;
+              margin-left: 0;
             }
 
             &:first-child {
@@ -1458,10 +1592,55 @@
         #orange-block {
           #white-border-content {
             #first-content {
+              #white-border-digit {
+                font-size: 72px;
+                line-height: 75px;
+                padding: 0 0 0 15px;
+              }
               #white-border-years {
                 position: absolute;
-                right: 36px;
-                top: 50px;
+                right: 123px;
+                top: 10px;
+                font-size: 35px;
+                line-height: 35px;
+              }
+            }
+            #white-border-guarantee {
+              left: 108px;
+              top: -42.5px;
+              line-height: 35px;
+              font-size: 35px;
+            }
+          }
+        }
+        #black-border {
+          padding: 25px 20px;
+          svg {
+            left: 15px;
+            top: 19px;
+            width: 40px;
+            height: 40px;
+            image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          #founder-quote {
+            font-size: 15px;
+            padding-left: 15px;
+            padding-bottom: 20px;
+          }
+          #black-border-founder {
+            #founder-name {
+              font-size: 16px;
+              width: 175px;
+            }
+            #founder-signature {
+              height: 51.8px;
+              width: 107.8px;
+              img {
+                width: 100%;
+                height: 100%;
               }
             }
           }
@@ -1475,18 +1654,13 @@
       max-width: 300px;
 
       h2 {
-        margin: 0 auto 30px auto;
-
-        &::before {
-          width: 30px;
-          margin-right: 15px;
-        }
+        margin: 0 auto 30px 10px;
       }
 
       #comment-description {
         max-width: 280px;
-        font-size: 13px;
-        margin: 0 auto 30px;
+        margin: 0 auto 30px 10px;
+        font-size: 18px;
       }
 
       #comment-content {
@@ -1504,7 +1678,6 @@
         }
 
         .comment-video .video-title {
-          font-size: 13.73px;
           margin: 9px 0 0;
         }
       }
@@ -1517,18 +1690,13 @@
       margin: 0 auto 30px;
 
       h2 {
-        margin: 0 auto 30px auto;
-
-        &::before {
-          width: 30px;
-          margin-right: 15px;
-        }
+        margin: 0 auto 30px 10px;
       }
 
       #form-block-description {
         max-width: 280px;
-        margin: 0 auto 30px auto;
-        font-size: 14px;
+        margin: 0 auto 30px 10px;
+        font-size: 18px;
       }
 
       #white-form {
@@ -1537,7 +1705,7 @@
 
         #form-title {
           max-width: 240px;
-          font-size: 15px;
+          font-size: 17px;
         }
 
         #inputs {
@@ -1595,13 +1763,21 @@
         }
 
         #address {
-          width: 186px;
+          width: 100%;
 
           div {
             &:first-child {
               font-size: 18px;
             }
           }
+        }
+
+        #work-time {
+          width: 100%;
+        }
+
+        #contacts {
+          width: 100%;
         }
       }
     }
@@ -1678,14 +1854,6 @@
     }
   }
 
-  .block-title {
-    font-size: 18px;
-
-    span {
-      font-size: 18px;
-    }
-  }
-
   .slick-list {
     padding: 12px 0 12px 8px;
   }
@@ -1701,7 +1869,7 @@
   }
 
   .slick-dots {
-    bottom: 280px;
+    bottom: 345px;
   }
 
   //&::before {

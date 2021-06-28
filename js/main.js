@@ -31,19 +31,21 @@ $(document).ready(() => {
             $(errorMessage).hide();
             popUpName.css('margin-bottom', '20px').css('border-color', 'rgb(126, 123, 121)');
             popUpPhone.css('margin-bottom', '20px').css('border-color', 'rgb(126, 123, 121)');
-            $.ajax({
-                type: 'post',
-                url: 'mail.php',
-                data: 'name=' + popUpName.val() + '&phone=' + popUpPhone.val(),
-                success: () => {
-                    $('#pop-up-form').hide();
-                    $('.success-message').show();
-                },
-                error: () => {
-                    alert('Ошибка запроса, неподалки с сервером.')
-                    $('#pop-up').hide();
-                }
-            });
+            $('#pop-up-form').hide();
+            $('.success-message').show();
+            // $.ajax({
+            //     type: 'post',
+            //     url: 'mail.php',
+            //     data: 'name=' + popUpName.val() + '&phone=' + popUpPhone.val(),
+            //     success: () => {
+            //         $('#pop-up-form').hide();
+            //         $('.success-message').show();
+            //     },
+            //     error: () => {
+            //         alert('Ошибка запроса, неподалки с сервером.')
+            //         $('#pop-up').hide();
+            //     }
+            // });
         } else {
             if (!popUpName.val()) {
                 $(errorMessage[3]).show();
@@ -72,20 +74,24 @@ $(document).ready(() => {
             inputName.css('border-color', 'rgb(126, 123, 121)');
             inputPhone.css('border-color', 'rgb(126, 123, 121)');
             inputTime.css('border-color', 'rgb(126, 123, 121)');
-            $.ajax({
-                type: 'post',
-                url: 'mail.php',
-                data: 'name=' + inputName.val() + '&phone=' + inputPhone.val() + '&time=' + inputTime.val(),
-                success: () => {
-                    $('#form-title').hide();
-                    $($('form')[0]).hide();
-                    $('.send-email').hide();
-                    $($('.success-message')[0]).show().css('margin-top', '35px');
-                },
-                error: () => {
-                    alert('Ошибка запроса, неподалки с сервером.')
-                }
-            });
+            $('#form-title').hide();
+            $($('form')[0]).hide();
+            $('.send-email').hide();
+            $($('.success-message')[0]).show().css('margin-top', '35px');
+            // $.ajax({
+            //     type: 'post',
+            //     url: 'mail.php',
+            //     data: 'name=' + inputName.val() + '&phone=' + inputPhone.val() + '&time=' + inputTime.val(),
+            //     success: () => {
+            //         $('#form-title').hide();
+            //         $($('form')[0]).hide();
+            //         $('.send-email').hide();
+            //         $($('.success-message')[0]).show().css('margin-top', '35px');
+            //     },
+            //     error: () => {
+            //         alert('Ошибка запроса, неподалки с сервером.')
+            //     }
+            // });
         } else {
             if (!inputName.val()) {
                 inputName.css('border-color', 'red');
@@ -115,6 +121,9 @@ $(document).ready(() => {
 
     $('#menu-bar').click(() => {
         menuBar.css('display', 'flex');
+        $('a.header-item').click(() => {
+            menuBar.css('display', 'none');
+        });
     });
 
     $('#menu-bar-close').click((e) => {
