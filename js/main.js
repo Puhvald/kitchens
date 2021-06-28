@@ -32,6 +32,8 @@ $(document).ready(() => {
             popUpName.css('margin-bottom', '20px').css('border-color', 'rgb(126, 123, 121)');
             popUpPhone.css('margin-bottom', '20px').css('border-color', 'rgb(126, 123, 121)');
             $('#pop-up-form').hide();
+            $('#pop-up-title').hide();
+            $('#pop-up-description').hide();
             $('.success-message').show();
             // $.ajax({
             //     type: 'post',
