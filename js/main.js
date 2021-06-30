@@ -80,6 +80,7 @@ $(document).ready(() => {
             $($('form')[0]).hide();
             $('.send-email').hide();
             $($('.success-message')[0]).show().css('margin-top', '35px');
+            $('#white-form').css('height', '230px');
             // $.ajax({
             //     type: 'post',
             //     url: 'mail.php',
